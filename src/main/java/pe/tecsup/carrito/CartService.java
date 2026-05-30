@@ -20,6 +20,9 @@ public class CartService {
             throw new IllegalArgumentException(
                     "El precio del producto no puede ser negativo: " + product.getPrice());
         }
+        if (products.size() >= 10) {
+            throw new IllegalStateException("El carrito no puede tener más de 10 productos distintos");
+        }
         products.add(product);
     }
 
