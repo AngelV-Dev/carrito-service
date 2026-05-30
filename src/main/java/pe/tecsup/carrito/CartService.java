@@ -44,4 +44,8 @@ public class CartService {
     public int getProductCount() {
         return products.size();
     }
+
+    public void clear() {
+        products.clear();
+    }
 }

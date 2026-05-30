@@ -140,4 +140,13 @@ class CartServiceTest {
         cart.addProduct(new Product("P2", 20.0));
         assertEquals(2, cart.getProductCount());
     }
+
+    @Test
+    @DisplayName("Vaciar carrito: el total vuelve a 0.0")
+    void clear_carritoConProductos_dejaTotalEnCero() {
+        cart.addProduct(new Product("P1", 100.0));
+        cart.clear();
+        assertEquals(0.0, cart.getTotal());
+        assertEquals(0, cart.getProductCount());
+    }
 }
