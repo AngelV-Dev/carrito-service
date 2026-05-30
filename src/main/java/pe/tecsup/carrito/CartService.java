@@ -33,4 +33,8 @@ public class CartService {
         }
         return total;
     }
+
+    public void removeProduct(Product product) {
+        products.remove(product);
+    }
 }
